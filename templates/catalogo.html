@@ -1,26 +1,31 @@
 {% extends "layout.html" %}
 
 {% block content %}
+<div class="container-fluid">
+    <h1>{{ titulo }}</h1>
+    <p>{{ mensaje }}</p>
 
-    <div class="container-fluid">
-        <h1>{{ titulo }}</h1>
-        <p>{{ mensaje }}</p>
-        
-        <h1>Catálogo de materiales</h1>
+    <div id="carouselExampleControls" class="carousel slide mi-carrusel" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="{{ url_for('static', filename='productos/calaverita.png') }}" class="d-block w-100" alt="Vaso">
+            </div>
+            <div class="carousel-item">
+                <img src="{{ url_for('static', filename='productos/figuras.png') }}" class="d-block w-100" alt="Disfraz">
+            </div>
+            <div class="carousel-item">
+                <img src="{{ url_for('static', filename='productos/galletitas.png') }}" class="d-block w-100" alt="Ofrenda">
+            </div>
+        </div>
 
-        <p>Explora nuestro catálogo y descubre una gran variedad de materiales educativos e informativos disponibles en la Biblioteca Saber y Conocimiento.</p>
-
-        <h2>Libros</h2>
-        <p>Contamos con libros de literatura, ciencia, historia, tecnología y otras áreas del conocimiento para fomentar el aprendizaje y la lectura.</p>
-
-        <h2>Revistas</h2>
-        <p>Disponemos de revistas con artículos de actualidad, investigaciones, cultura, ciencia y temas de interés general.</p>
-
-        <h2>Tesis</h2>
-        <p>Ofrecemos tesis y trabajos académicos que pueden servir como apoyo para investigaciones, proyectos escolares y consultas especializadas.</p>
-
-        <h2>Recursos digitales</h2>
-        <p>Contamos con recursos digitales como libros electrónicos, documentos, artículos y materiales educativos que facilitan el acceso a la información.</p>
-
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Siguiente</span>
+        </a>
     </div>
+</div>
 {% endblock %}

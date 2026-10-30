@@ -1,37 +1,45 @@
-
-/* Configuración general de la página */
+/* Configuración general de la página - Estilo Halloween Profesional */
 body {
-    background-color: #f5f6f8;
-    color: #444444;
+    background-color: #121214;
+    color: #c9d1d9;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     line-height: 1.7;
     margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-/* Área principal del contenido */
-.container-fluid,
-.container {
+/* Permitir que el contenido principal ocupe el espacio flexible */
+main.container {
+    flex: 1;
+}
+
+/* Área principal del contenido (Estilo tarjeta elegante sobre fondo oscuro) */
+.container:not(.navbar .container):not(footer .container) {
     padding: 35px;
     margin: 30px auto;
     max-width: 1100px;
-    background-color: #ffffff;
+    background-color: #1a1b1e;
+    border: 1px solid #30363d;
     border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 
 /* Títulos principales */
 h1 {
-    color: #34495e;
+    color: #ff7538; 
     font-size: 32px;
     font-weight: 600;
     margin-bottom: 20px;
     padding-bottom: 12px;
-    border-bottom: 2px solid #e5e9ef;
+    border-bottom: 2px solid #30363d;
 }
 
 /* Subtítulos */
 h2 {
-    color: #3f6585;
+    color: #b392f0; 
     font-size: 23px;
     font-weight: 600;
     margin-top: 30px;
@@ -40,32 +48,78 @@ h2 {
 
 /* Párrafos */
 p {
-    color: #555555;
+    color: #8b949e; 
     margin-bottom: 18px;
     text-align: justify;
 }
 
 /* Enlaces */
-a {
-    color: #3f6585;
+main a {
+    color: #ff9e64;
     text-decoration: none;
     transition: color 0.2s ease;
 }
 
-a:hover {
-    color: #1f3549;
+main a:hover {
+    color: #ff7538;
+    text-decoration: underline;
 }
 
-/* Espaciado para el contenido */
-.container-fluid > :first-child,
+/* Barra de navegación temática */
+.navbar {
+    background-color: #161b22 !important;
+    border-bottom: 1px solid #30363d;
+}
+
+.navbar-brand {
+    color: #ff7538 !important;
+    font-weight: bold;
+}
+
+/* Botones del menú */
+.navbar-nav .nav-link .btn {
+    border-color: #30363d;
+    color: #c9d1d9;
+    transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link .btn:hover {
+    background-color: #ff7538;
+    border-color: #ff7538;
+    color: #121214;
+}
+
+/* Pie de página */
+footer {
+    background-color: #161b22 !important;
+    color: #8b949e;
+    border-top: 1px solid #30363d;
+}
+
 .container > :first-child {
     margin-top: 0;
 }
 
+/* Configuración del carrusel */
+.mi-carrusel {
+    max-width: 800px;
+    margin: 30px auto;
+}
+
+.mi-carrusel .carousel-item img {
+    height: 350px;
+    width: 100%;
+    object-fit: contain;
+}
+
+.mi-carrusel .carousel-control-prev-icon,
+.mi-carrusel .carousel-control-next-icon {
+    filter: invert(1);
+}
+
 /* Adaptación para pantallas pequeñas */
 @media (max-width: 768px) {
-    .container-fluid,
-    .container {
+    .container:not(.navbar .container) {
         margin: 15px;
         padding: 20px;
     }
@@ -80,5 +134,11 @@ a:hover {
 
     p {
         text-align: left;
+    }
+    
+    p:first-of-type {
+        font-weight: 600;
+        color: #c9d1d9;
+        font-size: 1.15rem;
     }
 }

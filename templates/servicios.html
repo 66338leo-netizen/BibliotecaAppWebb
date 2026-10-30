@@ -1,32 +1,19 @@
 {% extends "layout.html" %}
 
 {% block content %}
+    <div>
+        <h1>{{ titulo }}</h1>
+        <p>{{ mensaje }}</p>
 
-    <div class="container">
-            <div class="container-fluid">
-                <h1>{{ titulo }}</h1>
-                <p>{{ mensaje }}</p>
-                
-                <h1>Nuestros servicios</h1>
-
-                <p>En la Biblioteca Saber y Conocimiento ofrecemos servicios diseñados para facilitar el aprendizaje, la investigación y el acceso a la información.</p>
-
-                <h2>Préstamo de libros</h2>
-                <p>Permite a los usuarios llevar libros a casa durante un periodo determinado, respetando las normas de préstamo de la biblioteca.</p>
-
-                <h2>Consulta en sala</h2>
-                <p>Ofrecemos un espacio tranquilo y cómodo para leer, estudiar, realizar tareas y consultar materiales dentro de la biblioteca.</p>
-
-                <h2>Acceso a recursos digitales</h2>
-                <p>Facilitamos el acceso a documentos electrónicos, libros digitales y otros recursos educativos para apoyar las actividades académicas.</p>
-
-                <h2>Orientación bibliográfica</h2>
-                <p>Brindamos ayuda para localizar libros, encontrar información confiable y utilizar fuentes bibliográficas para trabajos e investigaciones.</p>
-
+        <div class="card" style="width: 18rem;">
+            <img src="{{ url_for('static', filename='productos/calaverita.png') }}" class="card-img-top" alt="Servicio de Elaboración de Calaveritas">
+            <div class="card-body">
+                <h5 class="card-title">Calaveritas</h5>
+                <p class="card-text">Servicio de elaboración de calaveritas</p>
+                <a href="#" class="btn btn-primary">Más información</a>
             </div>
-
-    
+        </div>
+    </div>
 {% endblock %}
-
 
 
